@@ -1,0 +1,14 @@
+.grid {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  max-width: 800px;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}
