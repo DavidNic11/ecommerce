@@ -3,13 +3,19 @@ import type { Product } from "@lib/products";
 
 import { getAllProductIds, getProductById } from "@lib/products";
 import ProductScene from "@scenes/Products";
+import Meta from "@components/Meta";
 
 interface ProductProps {
   product: Product;
 }
 
 const ProductPage: NextPage<ProductProps> = ({ product }) => {
-  return <ProductScene product={product} />;
+  return (
+    <>
+      <Meta title={product.title} description={product.description} />
+      <ProductScene product={product} />
+    </>
+  );
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {

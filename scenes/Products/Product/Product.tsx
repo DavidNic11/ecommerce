@@ -1,6 +1,10 @@
-import Grid from "@components/Grid";
 import type { Product } from "@lib/products";
+
 import Image from "next/image";
+
+import Grid from "@components/Grid";
+
+import styles from "./Product.module.css";
 
 interface ProductProps {
   product: Product;
@@ -11,7 +15,7 @@ const ProductScene = ({ product }: ProductProps) => {
     <>
       <h1>{product.title}</h1>
       <Grid>
-        <div style={{ alignSelf: "start" }}>
+        <div className={styles.description}>
           <p>{product.description}</p>
           <p>Category: {product.category}</p>
           <p>Price: ${product.price}</p>

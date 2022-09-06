@@ -1,17 +1,9 @@
-import { getAllProductIds, Product } from "@lib/products";
-import { getAllProducts } from "@lib/products";
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import type { NextPage } from "next";
 
-interface NotFoundProps {
-  recommendedProducts: Product[];
-}
+import { NotFound } from "@scenes/Products";
 
-const ProductNotFound: NextPage<NotFoundProps> = ({ recommendedProducts }) => {
-  return (
-    <div>
-      <h1>Oh No! Could not find that product</h1>
-    </div>
-  );
+const ProductNotFound: NextPage = () => {
+  return <NotFound />;
 };
 
 export default ProductNotFound;
