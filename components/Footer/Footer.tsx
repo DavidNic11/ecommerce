@@ -9,9 +9,14 @@ const Footer = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Powered by
+        Built by
         <span className={styles.logo}>
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+          <Image
+            src="/bitovi-red.png"
+            alt="Vercel Logo"
+            width={72}
+            height={24}
+          />
         </span>
       </a>
     </footer>
