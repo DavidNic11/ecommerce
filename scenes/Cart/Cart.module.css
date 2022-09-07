@@ -1,0 +1,22 @@
+.container {
+  max-width: 800px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  padding: 16px;
+  margin-top: 16px;
+  border-radius: 6px;
+}
+
+.information {
+  flex: 1;
+  padding: 0 16px;
+}
+
+.quantity {
+  min-width: 60px;
+}
