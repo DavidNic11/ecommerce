@@ -12,12 +12,8 @@ const CartPage: NextPage<CartProps> = ({ cart }) => {
   return <CartScene cart={cart} />;
 };
 
-export const getServerSideProps: GetServerSideProps<CartProps> = async (
-  context
-) => {
-  const cart = await getCartWithProducts(
-    Number(context?.query?.cartNumber || 1)
-  );
+export const getServerSideProps: GetServerSideProps<CartProps> = async () => {
+  const cart = await getCartWithProducts();
 
   return {
     props: {
