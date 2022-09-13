@@ -17,6 +17,11 @@ const Nav = () => {
             <a>Cart</a>
           </Link>
         </li>
+        <li className={styles.link}>
+          <Link href="/user">
+            <a>User</a>
+          </Link>
+        </li>
       </ul>
     </nav>
   );
